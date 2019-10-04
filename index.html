@@ -98,19 +98,25 @@
        <tr>
          <td align=center width=100px>
         <center>
-        <span style="font-size:25px"><a href="http://legacydirs.umiacs.umd.edu/~sengupta/"><sup>Soumyadip Sengupta</sup></a></span>
+        <span style="font-size:25px"><a href="https://homes.cs.washington.edu/~soumya91/"><sup>Soumyadip Sengupta</sup></a></span>
         </center>
         </td>
          
         <td align=center width=100px>
         <center>
-        <span style="font-size:25px"><a href="http://www.cs.berkeley.edu/~kanazawa/"><sup>Angjoo Kanazawa</sup></a></span>
+        <span style="font-size:25px"><a href="https://www.gujinwei.org/"><sup>Jinwei Gu</sup></a></span>
         </center>
         </td>
          
          <td align=center width=100px>
         <center>
-        <span style="font-size:25px"><a href="http://legacydirs.umiacs.umd.edu/~carlos/"><sup>Carlos D. Castillo</sup></a></span>
+        <span style="font-size:25px"><a href="https://www.cc.gatech.edu/~kihwan23/"><sup>Kihwan Kim</sup></a></span>
+        </center>
+        </td>
+	       
+	<td align=center width=100px>
+        <center>
+        <span style="font-size:25px"><a href="https://liuguilin1225.github.io/"><sup>Guilin Liu</sup></a></span>
         </center>
         </td>
 
@@ -118,6 +124,12 @@
         <center>
         <span style="font-size:25px"><a href="https://www.cs.umd.edu/~djacobs/"><sup>David
 		W. Jacobs</sup></a></span>
+        </center>
+        </td>
+	       
+	<td align=center width=100px>
+        <center>
+        <span style="font-size:25px"><a href="http://jankautz.com/"><sup>Jan Kautz</sup></a></span>
         </center>
         </td>
 
@@ -130,8 +142,9 @@
        <tr>
         <td align=center width=100px>
         <center>
+		<span style="font-size:25px"><sup>NVIDIA</sup></span><br>
 		<span style="font-size:25px"><sup>University of Maryland, College Park</sup></span><br>
-		<span style="font-size:25px"><sup>University of California, Berkeley</sup><br> 
+		<span style="font-size:25px"><sup>University of Washington</sup><br> 
 </span></center>
         </td>
      </tr>
@@ -142,49 +155,41 @@
                 <tr>
                     <td width=600px>
                       <center>
-                          <a href="./resources/Teaser.png"><img src = "./resources/Teaser.png" width="700px"></img></href></a><br>
+                          <a href="./resources/Teaser.png"><img src = "./resources/Teaser_new_single_rot.png" width="700px"></img></href></a><br>
                     </center>
                     </td>
                 </tr>
                     <td width=700px>
                       <!-- <center> -->
-                          <span style="font-size:14px"><i> <span style="font-weight:bold">SfSNet:
-                            Learning Shape, Reflectance and Illuminance of Faces ‘in the wild’.</span> We present SfSNet that learns from
-a combination of labeled synthetic and unlabeled real data to produce
-an accurate decomposition of an image into surface normals,
-albedo and lighting. Relit images are shown to highlight the accuracy
-of the decomposition.</i>
+                          <span style="font-size:14px"><i> <span style="font-weight:bold">Neural Inverse Rendering of an Indoor Scene From a Single Image.</span> We propose a self-supervised approach for inverse rendering.
+We jointly decompose an indoor scene image into albedo,
+surface normal and environment map lighting (top). Our method
+outperforms state-of-the-art approaches (bottom) that solve for
+only one of the scene attributes, i.e. albedo (Li et. al.), normal
+(Zhang et. al.) and lighting (Gardner et. al.).</i>
                     <!-- </center> -->
                     </td>
                 </tr>
             </table>
 
 <br>
-	    We present SfSNet, an end-to-end learning framework
-for producing an accurate decomposition of an unconstrained
-image of a human face into shape, reflectance and
-illuminance. Our network is designed to reflect a physical
-lambertian rendering model. SfSNet learns from a mixture
-of labeled synthetic and unlabeled real world images.
-This allows the network to capture low frequency variations
-from synthetic images and high frequency details from real
-images through photometric reconstruction loss. SfSNet
-consists of a new decomposition architecture with residual
-blocks that learns complete separation of albedo and normal.
-This is used along with the original image to predict
-lighting. SfSNet produces significantly better quantitative
-and qualitative results than state-of-the-art methods for inverse
-rendering and independent normal and illumination
-estimation.
+	    Inverse rendering aims to estimate physical attributes of a scene, e.g., reflectance, geometry, and lighting, from image(s). Inverse rendering has been studied primarily for
+single objects or with methods that solve for only one of the scene attributes. We propose the first learning based approach
+that jointly estimates albedo, normals, and lighting of an indoor scene from a single image. Our key contribution
+is the Residual Appearance Renderer (RAR), which can be trained to synthesize complex appearance effects
+(e.g., inter-reflection, cast shadows, near-field illumination, and realistic shading), which would be neglected otherwise.
+This enables us to perform self-supervised learning on real data using a reconstruction loss, based on re-synthesizing
+the input image from the estimated components. We finetune with real data after pretraining with synthetic data. Experimental
+results show that our approach outperforms state-of-the-art methods that estimate one or more scene attributes.
             <br><br>
             <hr>
             <table align=center width=650>
               <center><h1>Paper</h1></center>
               <tr>
-                <td style="padding:1em"><a href="https://arxiv.org/abs/1712.01261"><img style="height:180px" src="./resources/thumb.png"/></a></td>
-                <td style="padding:1em"><span style="font-size:14pt">Soumyadip Sengupta, Angjoo Kanazawa, Carlos D. Castillo, David W. Jacobs.<br><br>
-                    SfSNet : Learning Shape, Reflectance and Illuminance of Faces ‘in the wild’<br><br>
-			In CVPR 2018 <b>(Spotlight)</b>.<br> </span>
+                <td style="padding:1em"><a href="https://arxiv.org/pdf/1901.02453.pdf"><img style="height:180px" src="./resources/thumb.png"/></a></td>
+                <td style="padding:1em"><span style="font-size:14pt">Soumyadip Sengupta, Jinwei Gu, Kihwan Kim, Guilin Liu, David W. Jacobs, Jan Kautz.<br><br>
+                    Neural Inverse Rendering of an Indoor Scene From a Single Image<br><br>
+			In ICCV 2019.<br> </span>
                 </td>
               </tr>
             </table>
@@ -193,7 +198,7 @@ estimation.
 <table align=center width=180px>
               <tr>
                 <td><span style="font-size:14pt"><center>
-                      <a href="https://arxiv.org/pdf/1712.01261.pdf">[pdf]</a>
+                      <a href="https://arxiv.org/pdf/1901.02453.pdf">[pdf]</a>
                 </center></td>
 		
                 <td><span style="font-size:14pt"><center>
@@ -207,25 +212,25 @@ estimation.
             <table align=center width=1000px> 
               <tr> 
 		<center> 
-		  <img class="round" style="width:900" src="./resources/network_overview.png"/> 
+		  <img class="round" style="width:900" src="./resources/networks_final.png"/> 
 		</center>
               <td width=600px>
 		<!-- <center> -->
-		<span style="font-size:14px"><i> <span style="font-weight:bold">Network Architecture.</span> Our SfSNet consists of a novel decomposition architecture that uses residual blocks to produce normal
-and albedo features. They are further utilized along with image features to estimate lighting, inspired by a physical rendering model. f
-combines normal and lighting to produce shading.</i></span>
+		<span style="font-size:14px"><i> <span style="font-weight:bold">Overview of our approach.</span>  Our Inverse Rendering Network (IRN) predicts albedo, normals and illumination map. We train
+on unlabeled real images using self-supervised reconstruction loss. Reconstruction loss consists of a closed-form Direct Renderer with no
+learnable parameters and the proposed Residual Appearance Renderer (RAR), which learns to predict complex appearance effects.</i></span>
 		<!-- </center> -->
               </td>
               </tr>
 		    
-	      <tr>
+<!-- 	      <tr>
 	      <td><center> <br> 
 		  <span style="font-size:25px">&nbsp;<a href='https://github.com/senguptaumd/SfSNet'>
 			 [GitHub] </a> </span>
 		  <br> 
 		</center>
 	      </td>
-	      </tr>
+	      </tr> -->
 	    </table>
 
 <br>

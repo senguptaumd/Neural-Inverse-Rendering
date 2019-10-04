@@ -1,0 +1,309 @@
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight:300;
+        font-size:18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+    }
+    h1 {
+        font-weight:300;
+    }
+    .disclaimerbox {
+        background-color: #eee;
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+        padding: 20px;
+    }
+    video.header-vid {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+    img.header-img {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+    img.rounded {
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+    a:link,a:visited
+    {
+        color: #1367a7;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #208799;
+    }
+    td.dl-link {
+        height: 160px;
+        text-align: center;
+        font-size: 22px;
+    }
+    .vert-cent {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    hr
+    {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(10, 10, 10, 0),
+    rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0));
+        margin: 1em 0 1em 0;
+    }
+</style>
+
+<html>
+  <head>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116086767-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116086767-1');
+</script>
+
+        <title>SfSNet</title>
+        <meta property="og:title" content="SfSNet" />	
+  </head>
+
+  <body>
+    <br>
+    <center>
+      <span style="font-size:42px">SfSNet: Learning Shape, Reflectance and Illuminance of Faces ‘in the wild’
+	</span>
+    </center>
+
+    <br><br>
+      <table align=center width=900px>
+       <tr>
+         <td align=center width=100px>
+        <center>
+        <span style="font-size:25px"><a href="http://legacydirs.umiacs.umd.edu/~sengupta/"><sup>Soumyadip Sengupta</sup></a></span>
+        </center>
+        </td>
+         
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:25px"><a href="http://www.cs.berkeley.edu/~kanazawa/"><sup>Angjoo Kanazawa</sup></a></span>
+        </center>
+        </td>
+         
+         <td align=center width=100px>
+        <center>
+        <span style="font-size:25px"><a href="http://legacydirs.umiacs.umd.edu/~carlos/"><sup>Carlos D. Castillo</sup></a></span>
+        </center>
+        </td>
+
+        <td align=center width=100px>
+        <center>
+        <span style="font-size:25px"><a href="https://www.cs.umd.edu/~djacobs/"><sup>David
+		W. Jacobs</sup></a></span>
+        </center>
+        </td>
+
+        
+     </tr>
+    </table>
+
+    <br>
+    <table align=center width=700px>
+       <tr>
+        <td align=center width=100px>
+        <center>
+		<span style="font-size:25px"><sup>University of Maryland, College Park</sup></span><br>
+		<span style="font-size:25px"><sup>University of California, Berkeley</sup><br> 
+</span></center>
+        </td>
+     </tr>
+    </table>
+
+            <br>
+            <table align=center width=1000px>
+                <tr>
+                    <td width=600px>
+                      <center>
+                          <a href="./resources/Teaser.png"><img src = "./resources/Teaser.png" width="700px"></img></href></a><br>
+                    </center>
+                    </td>
+                </tr>
+                    <td width=700px>
+                      <!-- <center> -->
+                          <span style="font-size:14px"><i> <span style="font-weight:bold">SfSNet:
+                            Learning Shape, Reflectance and Illuminance of Faces ‘in the wild’.</span> We present SfSNet that learns from
+a combination of labeled synthetic and unlabeled real data to produce
+an accurate decomposition of an image into surface normals,
+albedo and lighting. Relit images are shown to highlight the accuracy
+of the decomposition.</i>
+                    <!-- </center> -->
+                    </td>
+                </tr>
+            </table>
+
+<br>
+	    We present SfSNet, an end-to-end learning framework
+for producing an accurate decomposition of an unconstrained
+image of a human face into shape, reflectance and
+illuminance. Our network is designed to reflect a physical
+lambertian rendering model. SfSNet learns from a mixture
+of labeled synthetic and unlabeled real world images.
+This allows the network to capture low frequency variations
+from synthetic images and high frequency details from real
+images through photometric reconstruction loss. SfSNet
+consists of a new decomposition architecture with residual
+blocks that learns complete separation of albedo and normal.
+This is used along with the original image to predict
+lighting. SfSNet produces significantly better quantitative
+and qualitative results than state-of-the-art methods for inverse
+rendering and independent normal and illumination
+estimation.
+            <br><br>
+            <hr>
+            <table align=center width=650>
+              <center><h1>Paper</h1></center>
+              <tr>
+                <td style="padding:1em"><a href="https://arxiv.org/abs/1712.01261"><img style="height:180px" src="./resources/thumb.png"/></a></td>
+                <td style="padding:1em"><span style="font-size:14pt">Soumyadip Sengupta, Angjoo Kanazawa, Carlos D. Castillo, David W. Jacobs.<br><br>
+                    SfSNet : Learning Shape, Reflectance and Illuminance of Faces ‘in the wild’<br><br>
+			In CVPR 2018 <b>(Spotlight)</b>.<br> </span>
+                </td>
+              </tr>
+            </table>
+            <br>
+
+<table align=center width=180px>
+              <tr>
+                <td><span style="font-size:14pt"><center>
+                      <a href="https://arxiv.org/pdf/1712.01261.pdf">[pdf]</a>
+                </center></td>
+		
+                <td><span style="font-size:14pt"><center>
+                      <a href="./resources/bibtex.txt">[Bibtex]</a>
+                </center></td>
+              </tr>
+            </table>
+            <br>  
+	    <hr>
+            <center><h1>Code</h1></center> 
+            <table align=center width=1000px> 
+              <tr> 
+		<center> 
+		  <img class="round" style="width:900" src="./resources/network_overview.png"/> 
+		</center>
+              <td width=600px>
+		<!-- <center> -->
+		<span style="font-size:14px"><i> <span style="font-weight:bold">Network Architecture.</span> Our SfSNet consists of a novel decomposition architecture that uses residual blocks to produce normal
+and albedo features. They are further utilized along with image features to estimate lighting, inspired by a physical rendering model. f
+combines normal and lighting to produce shading.</i></span>
+		<!-- </center> -->
+              </td>
+              </tr>
+		    
+	      <tr>
+	      <td><center> <br> 
+		  <span style="font-size:25px">&nbsp;<a href='https://github.com/senguptaumd/SfSNet'>
+			 [GitHub] </a> </span>
+		  <br> 
+		</center>
+	      </td>
+	      </tr>
+	    </table>
+
+<br>
+<hr>
+
+<a name="applications"></a>
+			<center><h1>Results</h1></center>
+			<!-- Our Differentiable Ray Consistency (DRC) formulation allows us to learn single-view 3D reconstruction using varying kinds of multi-view observations and can be applied to diverse settings.-->
+
+			<br><br>
+			<table align=center width=1100px>
+				<tr>
+					<td width=400px>
+						<center> <span align="top" style="font-size:20px">Comparison with <a href="https://github.com/zhixinshu/NeuralFaceEditing">Neural Face</a></span><br><br> </center>
+					</td>
+					<td width=50px> </td>
+					<td width=400px>
+						<center> <span align="top" style="font-size:20px">Comparison with <a href="https://arxiv.org/abs/1703.10580">MoFA</a></span><br><br> </center>
+					</td>
+				</tr>
+				<tr height="300px">
+					<td valign="top" height=400px>
+					<center>
+					<a href="./resourcesimages/adobe.png"><img img src = "./resources/adobe.png" height = "600px"></a><br>
+					<span style="font-size:14px">SfSNet vs Neural Face on
+the data showcased by the authors. Note that the normals shown
+by SfSNet and Neural Face have reversed color codes due to
+different choices in the coordinate system.</span><br><br>
+					</center>
+					</td>
+
+					<td width=50px> </td>
+
+					<td  valign="top" height=400px>
+					<center>
+					<a href="./resources/mofa.png"><img img src = "./resources/mofa.png" height = "600px"></a><br>
+					<span style="font-size:14px">SfSNet vs MoFA on the
+data provided by the authors of the paper.</span><br><br>
+					</center>
+					</td>
+				</tr>
+</table>
+
+
+					<center> <span align="top" style="font-size:20px">Comparison with <a href="https://github.com/matansel/pix2vertex">Pix2Vertex</a></span><br><br> </center>
+					<center>
+					<a href="./resources/Kimmel.png"><img img src = "./resources/Kimmel.png" width = "600px"></a><br>
+					</center>
+					<center><span style="font-size:14px" align="bottom">Normals produced by SfSNet
+are significantly better than Pix2Vertex, especially for nonambient
+illumination and expression. ‘Relit’ images are generated
+by directional lighting and uniform albedo to highlight the quality
+of the reconstructed normals. Note that (a), (b) and (c) are the
+images showcased by the authors.</span> </center>
+					
+<br>
+<center>
+	For more qualitative and quantitative comparisons, please see our <a href="https://arxiv.org/pdf/1712.01261.pdf"> paper</a>.
+</center>
+
+		<br>
+		<hr>
+            <table align=center width=1100px>
+                <tr>
+                    <td>
+                      <left>
+			<center><h1>Acknowledgements</h1></center>
+			      We thank Hao Zhou and Rajeev Ranjan for helpful discussions, Ayush Tewari for providing visual results of MoFA, and Zhixin Shu for providing test images of Neural Face.
+			 This research is supported by the National Science Foundation under grant no. IIS-1526234.			
+		This webpage template is taken
+			from <a href="https://shubhtuls.github.io/drc/">humans
+			working on 3D</a> who borrowed it
+		from some <a href="https://richzhang.github.io/colorization/">colorful folks</a>.
+            </left>
+        </td>
+        </tr>
+        </table>
+
+        <br><br>
+</body>
+</html>

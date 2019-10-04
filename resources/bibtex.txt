@@ -1,0 +1,6 @@
+@InProceedings{neuralSengupta19,
+  title={Neural Inverse Rendering of an Indoor Scene From a Single Image},
+  author = {Soumyadip Sengupta and Jinwei Gu and Kihwan Kim and Guilin Liu and David W. Jacobs and Jan Kautz},
+  booktitle={International Conference on Computer Vision (ICCV)},
+  year={2019}
+}

@@ -1,1 +1,1 @@
-# NeuralInverseRendering
+# Neural-Inverse-Rendering

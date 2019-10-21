@@ -1,1 +1,2 @@
-# Neural-Inverse-Rendering
+## <b>Neural Inverse Rendering of an Indoor Scene From a Single Image</b> [[Project Page]](https://senguptaumd.github.io/Neural-Inverse-Rendering/) <br>
+[Soumyadip Sengupta](https://homes.cs.washington.edu/~soumya91/), [Jinwei Gu](https://www.gujinwei.org/), [Kihwan Kim](https://www.cc.gatech.edu/~kihwan23/), [Guilin Liu](https://liuguilin1225.github.io/), [David W. Jacobs](https://www.cs.umd.edu/~djacobs/), [Jan Kautz](http://jankautz.com/). In [CVPR 2019.](https://arxiv.org/abs/1901.02453).
